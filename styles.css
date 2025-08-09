@@ -71,6 +71,10 @@ h1, h2, h3 {
   margin: 0 auto;
   padding: 3rem 1rem;
   text-align: center;
+  background: url('images/hero.jpg') center/cover no-repeat;
+  color: white; /* si la imagen es oscura, el texto será visible */
+  background-blend-mode: overlay;
+  background-color: rgba(0,0,0,0.4);
 }
 
 .hero h1 {
@@ -168,3 +172,4 @@ h1, h2, h3 {
     display: flex;
   }
 }
+
