@@ -39,11 +39,11 @@ h1, h2, h3{ font-family: Poppins, Inter, sans-serif; }
   display:flex; justify-content:space-between; align-items:center;
 }
 .logo {
-  font-family: 'Playfair Display', serif; /* Fuente elegante para la marca */
+  font-family: 'Raleway', serif; /* Fuente elegante para la marca */
   font-size: 3rem; /* Mucho más grande */
   font-weight: 700;
   letter-spacing: 1px; /* Espaciado sutil */
-  color: var(--secondary1);
+  color: var(--primary);
   text-decoration: none;
 }
 .nav-toggle{ display:none; background:none; border:0; font-size:1.25rem; color:var(--ink); cursor:pointer; }
@@ -148,4 +148,5 @@ h1, h2, h3{ font-family: Poppins, Inter, sans-serif; }
   .menu.open{ display:flex; }
   .hero{ height: 90vh; background-position: center 30%; }
 }
+
 
