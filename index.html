@@ -1,1 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mente Viva | Comunidad de Salud Cerebral para Mujeres</title>
+  <meta name="description" content="Comunidad divertida e informativa para mejorar tu salud cerebral." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#">Mente Viva</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#retos">Retos</a></li>
+        <li><a href="#comunidad">Comunidad</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="inicio" class="hero">
+    <h1>Salud cerebral para mujeres, sin rollos</h1>
+    <p>Hábitos pequeñitos, ciencia clara y comunidad que te anima.</p>
+    <form id="newsletter" class="newsletter" aria-label="Suscríbete al newsletter">
+      <label for="email" class="sr-only">Correo electrónico</label>
+      <input id="email" name="email" type="email" placeholder="tu@email.com" required />
+      <button type="submit">Quiero unirme</button>
+      <small id="status" role="status" aria-live="polite"></small>
+    </form>
+  </main>
+
+  <section id="recursos" class="section">
+    <h2>Recursos rápidos</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Guía: Sueño que de verdad descansa</h3>
+        <p>Rutina de 15 minutos nocturnos y señales de sueño saludable.</p>
+        <a href="#" aria-disabled="true">Descargar (pronto)</a>
+      </article>
+      <article class="card">
+        <h3>Ciclo y cerebro</h3>
+        <p>Cómo varía la energía, el foco y el estado de ánimo a lo largo del ciclo.</p>
+        <a href="#" aria-disabled="true">Leer (pronto)</a>
+      </article>
+      <article class="card">
+        <h3>Snack mental</h3>
+        <p>Ideas de nutrición sencilla para claridad y concentración.</p>
+        <a href="#" aria-disabled="true">Ver recetas (pronto)</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="retos" class="section alt">
+    <h2>Retos de 7 días</h2>
+    <ul class="list">
+      <li><strong>Respira y enfoca:</strong> 3 respiraciones guiadas antes de cada bloque de estudio.</li>
+      <li><strong>Desconexión suave:</strong> 30 minutos sin pantalla antes de dormir.</li>
+      <li><strong>Movimiento feliz:</strong> 20 minutos diarios de caminata con música.</li>
+    </ul>
+    <p><a href="#" aria-disabled="true">Únete al próximo reto (pronto)</a></p>
+  </section>
+
+  <section id="comunidad" class="section">
+    <h2>Únete a la comunidad</h2>
+    <p>Espacio seguro y cero juicios para compartir avances, dudas y ganar constancia.</p>
+    <a class="cta" href="https://discord.com" target="_blank" rel="noopener">Entrar al Discord</a>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Mente Viva • <a href="#" aria-disabled="true">Privacidad</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
 
