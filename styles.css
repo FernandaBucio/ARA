@@ -69,12 +69,28 @@ h1, h2, h3 {
 .hero {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
   text-align: center;
-  background: url('images/hero.jpg') center/cover no-repeat;
-  color: white; /* si la imagen es oscura, el texto será visible */
-  background-blend-mode: overlay;
-  background-color: rgba(0,0,0,0.4);
+
+  /* Imagen de fondo */
+  background: 
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url('images/brainhealth.jpg') center/cover no-repeat;
+
+  color: white;
+  min-height: 60vh; /* alto mínimo para que luzca */
+}
+
+/* Mejora legibilidad del texto sobre la imagen */
+.hero h1, .hero p {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 720px) {
+  .hero { 
+    padding: 3rem 1rem; 
+    background-position: center 30%;
+  }
 }
 
 .hero h1 {
@@ -172,4 +188,5 @@ h1, h2, h3 {
     display: flex;
   }
 }
+
 
