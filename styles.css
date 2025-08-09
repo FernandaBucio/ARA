@@ -74,7 +74,7 @@ h1, h2, h3 {
   /* Imagen de fondo centrada y cubierta */
   background: 
     linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url('images/brainhealth.jpg') center center / cover no-repeat;
+    url('images/women.jpg') center center / cover no-repeat;
 
   /* Centrar el contenido */
   display: flex;
@@ -102,7 +102,7 @@ h1, h2, h3 {
 .hero h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1rem;
-  color: var(--violet);
+  color: white;
 }
 
 .hero p {
@@ -194,6 +194,7 @@ h1, h2, h3 {
     display: flex;
   }
 }
+
 
 
 
