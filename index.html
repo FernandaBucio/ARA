@@ -1,80 +1,92 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mente Viva | Comunidad de Salud Cerebral para Mujeres</title>
-  <meta name="description" content="Comunidad divertida e informativa para mejorar tu salud cerebral." />
+  <title>ARA | Brain-first health for women</title>
+  <meta name="description" content="ARA is a fun, science-based community for women. Care for your brain and you care for your whole health." />
+  <meta property="og:title" content="ARA | Brain-first health for women" />
+  <meta property="og:description" content="Care for your brain. Elevate your sleep, mood, focus, and energy." />
+  <meta property="og:type" content="website" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="#">Mente Viva</a>
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="#" aria-label="ARA home">ARA</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
       <ul id="menu" class="menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#recursos">Recursos</a></li>
-        <li><a href="#retos">Retos</a></li>
-        <li><a href="#comunidad">Comunidad</a></li>
+        <li><a href="#start">Start</a></li>
+        <li><a href="#pillars">Pillars</a></li>
+        <li><a href="#challenges">Challenges</a></li>
+        <li><a href="#community">Community</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="inicio" class="hero">
-    <h1>Salud cerebral para mujeres, sin rollos</h1>
-    <p>Hábitos pequeñitos, ciencia clara y comunidad que te anima.</p>
-    <form id="newsletter" class="newsletter" aria-label="Suscríbete al newsletter">
-      <label for="email" class="sr-only">Correo electrónico</label>
-      <input id="email" name="email" type="email" placeholder="tu@email.com" required />
-      <button type="submit">Quiero unirme</button>
+  <main id="start" class="hero">
+    <h1>Brain-first health, made simple</h1>
+    <p>When you care for your brain, you lift everything else. Sleep, mood, focus, energy, hormones.</p>
+
+    <!-- Option A: simple built-in form (works now, replace later with Substack/Mailchimp) -->
+    <form id="newsletter" class="newsletter" aria-label="Join the newsletter">
+      <label for="email" class="sr-only">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@email.com" required />
+      <button type="submit">Join free</button>
       <small id="status" role="status" aria-live="polite"></small>
     </form>
+
+    <!-- Option B: Substack embed (replace YOUR-SUBSTACK with your substack handle) 
+    <iframe src="https://YOUR-SUBSTACK.substack.com/embed" width="480" height="180" style="background: #fff; border:1px solid #e5e7eb; border-radius:12px;" frameborder="0" scrolling="no"></iframe>
+    -->
   </main>
 
-  <section id="recursos" class="section">
-    <h2>Recursos rápidos</h2>
+  <section id="pillars" class="section">
+    <h2>ARA pillars</h2>
     <div class="cards">
       <article class="card">
-        <h3>Guía: Sueño que de verdad descansa</h3>
-        <p>Rutina de 15 minutos nocturnos y señales de sueño saludable.</p>
-        <a href="#" aria-disabled="true">Descargar (pronto)</a>
+        <h3>Sleep that truly restores</h3>
+        <p>Simple night routine and signals of healthy sleep so your brain can reset and protect memory.</p>
+        <a href="#" aria-disabled="true">Guide (coming soon)</a>
       </article>
       <article class="card">
-        <h3>Ciclo y cerebro</h3>
-        <p>Cómo varía la energía, el foco y el estado de ánimo a lo largo del ciclo.</p>
-        <a href="#" aria-disabled="true">Leer (pronto)</a>
+        <h3>Cycle × brain</h3>
+        <p>How focus, motivation, and mood shift through the cycle and how to work with it, not against it.</p>
+        <a href="#" aria-disabled="true">Read (coming soon)</a>
       </article>
       <article class="card">
-        <h3>Snack mental</h3>
-        <p>Ideas de nutrición sencilla para claridad y concentración.</p>
-        <a href="#" aria-disabled="true">Ver recetas (pronto)</a>
+        <h3>Food for focus</h3>
+        <p>Snack ideas and timing that keep glucose steady and your mind clear during busy days.</p>
+        <a href="#" aria-disabled="true">Recipes (coming soon)</a>
+      </article>
+      <article class="card">
+        <h3>Stress that serves you</h3>
+        <p>Light-touch breathing and movement breaks that lower reactivity and boost resilience.</p>
+        <a href="#" aria-disabled="true">Tools (coming soon)</a>
       </article>
     </div>
   </section>
 
-  <section id="retos" class="section alt">
-    <h2>Retos de 7 días</h2>
+  <section id="challenges" class="section alt">
+    <h2>7-day micro challenges</h2>
     <ul class="list">
-      <li><strong>Respira y enfoca:</strong> 3 respiraciones guiadas antes de cada bloque de estudio.</li>
-      <li><strong>Desconexión suave:</strong> 30 minutos sin pantalla antes de dormir.</li>
-      <li><strong>Movimiento feliz:</strong> 20 minutos diarios de caminata con música.</li>
+      <li><strong>Breathe and focus:</strong> 3 guided breaths before every study or work block.</li>
+      <li><strong>Gentle shutdown:</strong> 30 minutes without screens before bed.</li>
+      <li><strong>Happy movement:</strong> 20 minutes of walking with music every day.</li>
     </ul>
-    <p><a href="#" aria-disabled="true">Únete al próximo reto (pronto)</a></p>
+    <p><a href="#" aria-disabled="true">Join the next challenge (soon)</a></p>
   </section>
 
-  <section id="comunidad" class="section">
-    <h2>Únete a la comunidad</h2>
-    <p>Espacio seguro y cero juicios para compartir avances, dudas y ganar constancia.</p>
-    <a class="cta" href="https://discord.com" target="_blank" rel="noopener">Entrar al Discord</a>
+  <section id="community" class="section">
+    <h2>Join the ARA community</h2>
+    <p>Supportive, judgment-free space to share wins, ask questions, and build consistency with brain-first habits.</p>
+    <a class="cta" href="https://discord.com" target="_blank" rel="noopener">Enter Discord</a>
   </section>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Mente Viva • <a href="#" aria-disabled="true">Privacidad</a></p>
+    <p>© <span id="year"></span> ARA • <a href="#" aria-disabled="true">Privacy</a></p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
