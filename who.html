@@ -10,7 +10,8 @@
 <body>
 
   <!-- Header -->
-  <header class="site-header">
+  <!-- Note the extra class: site-header--over-video -->
+  <header class="site-header site-header--over-video">
     <nav class="nav" aria-label="Main">
       <a class="logo" href="index.html" aria-label="ARA home">ARA</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu">☰</button>
@@ -24,18 +25,12 @@
     </nav>
   </header>
 
-  <!-- HERO VIDEO (optional) -->
-  <!-- Coloca tu video en videos/intro.mp4 y un poster en images/who-poster.jpg -->
+  <!-- Fullscreen video directly under the header -->
   <section class="hero-video">
     <video class="hero-video__media" autoplay muted loop playsinline poster="images/who-poster.jpg">
       <source src="videos/intro.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <div class="hero-video__overlay"></div>
-    <div class="hero-video__content">
-      <h1>Who We Are</h1>
-      <p class="hero-lead">We act from the root — using neuroscience to create lasting change for women’s brain and body health.</p>
-    </div>
   </section>
 
   <!-- Mission -->
@@ -52,7 +47,7 @@
     <h2>Meet Our Founder</h2>
     <div class="about-container">
       <div class="about-image">
-        <img src="images/Founder.jpg.jpg" alt="Fernanda Bucio - Founder of ARA" />
+        <img src="images/founder.jpg" alt="Fernanda Bucio - Founder of ARA" />
       </div>
       <div class="about-text">
         <h3>Fernanda Bucio</h3>
