@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header (not overlaying the video) -->
   <header class="site-header">
     <nav class="nav" aria-label="Main">
       <a class="logo" href="#" aria-label="ARA home">ARA</a>
@@ -26,8 +27,7 @@
     </nav>
   </header>
 
-  <!-- NEW: Fullscreen intro video with NO text -->
-  <!-- Put your file at videos/intro.mp4 (case-sensitive). Optional poster while it loads. -->
+  <!-- Intro video: full screen, NO text -->
   <section class="intro-video" aria-label="Intro video">
     <video class="intro-video__media" autoplay muted loop playsinline preload="metadata" poster="images/hero-poster.jpg">
       <source src="videos/intro.mp4" type="video/mp4" />
@@ -35,7 +35,7 @@
     </video>
   </section>
 
-  <!-- Existing hero (image + text + buttons) stays as-is -->
+  <!-- Hero with text + form (image background from your CSS .hero) -->
   <main id="start" class="hero">
     <h1>Daily Wins for your Brain</h1>
     <p>When you care for your brain, you lift everything else. Sleep, mood, focus, energy, hormones.</p>
@@ -48,6 +48,7 @@
     </form>
   </main>
 
+  <!-- Pillars -->
   <section id="pillars" class="section">
     <h2>ARA pillars</h2>
     <div class="cards">
@@ -74,6 +75,7 @@
     </div>
   </section>
 
+  <!-- Challenges -->
   <section id="challenges" class="section alt">
     <h2>7-day micro challenges</h2>
     <ul class="list">
@@ -84,6 +86,7 @@
     <p><a href="#" aria-disabled="true">Join the next challenge (soon)</a></p>
   </section>
 
+  <!-- Community -->
   <section id="community" class="section">
     <h2>Join the ARA community</h2>
     <p>Supportive, judgment-free space to share wins, ask questions, and build consistency with brain-first habits.</p>
