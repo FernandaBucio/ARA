@@ -69,10 +69,13 @@ a:hover{ color: var(--secondary2); text-decoration:underline; }
 .site-header.is-solid .menu a:hover{ color: var(--secondary2); background: rgba(208,39,117,.08); }
 
 /* ===== Fullscreen Intro Video (no text) ===== */
-.intro-video{
-  position:relative; width:100%; height:100vh; overflow:hidden;
-  /* empuja el contenido debajo del header fijo */
-  margin-top: var(--header-h);
+
+.intro-video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 0; /* o simplemente eliminar la línea anterior con var(--header-h) */
 }
 .intro-video__media{
   position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
@@ -180,3 +183,4 @@ ul.list li{ margin:.25rem 0; }
   .site-header:not(.is-solid) .menu a{ color:#fff; text-shadow:none; }
   .intro-video{ height:90vh; }
 }
+
