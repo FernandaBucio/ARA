@@ -28,3 +28,24 @@ if (form) {
     form.reset();
   });
 }
+// Solid header after the intro video
+(function(){
+  const header = document.querySelector('.site-header');
+  const intro = document.querySelector('.intro-video'); // the top video section
+  if (!header || !intro) return;
+
+  function onScroll(){
+    const threshold = intro.offsetHeight - 10; // a tiny buffer
+    if (window.scrollY > threshold){
+      header.classList.add('is-solid');
+    } else {
+      header.classList.remove('is-solid');
+    }
+  }
+
+  // Run on load & on scroll
+  onScroll();
+  window.addEventListener('scroll', onScroll);
+  window.addEventListener('resize', onScroll);
+})();
+
