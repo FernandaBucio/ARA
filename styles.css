@@ -48,7 +48,7 @@ a:hover{ color: var(--secondary2); text-decoration:underline; }
 .logo{
   font-family: Poppins, sans-serif;
   font-size:3rem; font-weight:700; letter-spacing:1px; text-decoration:none;
-  color: var(--primary);
+  color: var(--white);
   text-shadow:0 2px 4px rgba(0,0,0,.45);
   transition: color .2s ease, text-shadow .2s ease;
 }
@@ -183,4 +183,5 @@ ul.list li{ margin:.25rem 0; }
   .site-header:not(.is-solid) .menu a{ color:#fff; text-shadow:none; }
   .intro-video{ height:90vh; }
 }
+
 
