@@ -26,7 +26,7 @@
 
 /* Logo */
 .logo{
-  font-family: 'Raleway', sans-serif;
+  font-family: Poppins, sans-serif;
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -199,3 +199,4 @@ ul.list li{ margin: .25rem 0; }
 
 /* Asegura tipografías por si no cargaron antes */
 body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
