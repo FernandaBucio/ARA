@@ -129,3 +129,73 @@
     text-shadow: none;
   }
 }
+/* ===== POLISH PACK: tipografía, enlaces, espaciados, tarjetas ===== */
+
+/* Enlaces más “marca” */
+a { color: var(--secondary1); text-decoration: none; font-weight: 600; }
+a:hover { color: var(--secondary2); text-decoration: underline; }
+
+/* Títulos y párrafos con mejor ritmo visual */
+h1, h2, h3 { font-family: Poppins, Inter, sans-serif; letter-spacing: .2px; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 .75rem; }
+h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); margin: 0 0 1rem; }
+h3 { font-size: clamp(1.05rem, 2vw, 1.25rem); margin: .25rem 0 .5rem; }
+.section p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.75; }
+
+/* Contenedor y respiración */
+.section { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  padding: 3rem 1rem;           /* más espacio vertical */
+}
+.section + .section { padding-top: 2.5rem; } /* coherencia entre bloques */
+
+/* Variante alterna con fondo sutil (teal suave) */
+.section.alt {
+  background: linear-gradient(180deg, var(--white) 0%, rgba(142,233,207,.18) 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+}
+
+/* Tarjetas más premium */
+.cards { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+  gap: 1.2rem; 
+}
+.card{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem 1rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover{ 
+  transform: translateY(-2px); 
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+/* Botón CTA más sólido */
+.cta{
+  display:inline-block; 
+  background: linear-gradient(90deg, var(--secondary1), var(--secondary2));
+  color:#fff; padding:.9rem 1.2rem; border-radius:12px; font-weight:700;
+  box-shadow: 0 8px 22px rgba(173,22,85,.28);
+}
+.cta:hover{ filter: brightness(1.06); }
+
+/* Listas bien formadas */
+ul.list{ margin: .5rem 0 0 1.25rem; }
+ul.list li{ margin: .25rem 0; }
+
+/* Evita que el header fijo tape anclas (#start, #pillars, etc.) */
+:root { --header-h: 72px; }
+[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
+
+/* Separación natural entre el video y el hero de texto */
+.intro-video + .hero { margin-top: 0; }
+
+/* Asegura tipografías por si no cargaron antes */
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
