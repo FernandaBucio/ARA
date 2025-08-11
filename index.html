@@ -3,19 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ARA | Upgrade your brain Elevate your life.</title>
+  <title>ARA | Upgrade your brain. Elevate your life.</title>
   <meta name="description" content="ARA is a fun, science-based community for women. Care for your brain and you care for your whole health." />
-  <meta property="og:title" content="ARA | Upgrade your brain Elevate your life." />
+  <meta property="og:title" content="ARA | Upgrade your brain. Elevate your life." />
   <meta property="og:description" content="Care for your brain. Elevate your sleep, mood, focus, and energy." />
   <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#AD1655" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header (not overlaying the video) -->
+  <!-- Header -->
   <header class="site-header">
     <nav class="nav" aria-label="Main">
-      <a class="logo" href="#" aria-label="ARA home">ARA</a>
+      <a class="logo" href="#start" aria-label="ARA home">ARA</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu">☰</button>
       <ul id="menu" class="menu">
         <li><a href="#start">Start</a></li>
@@ -27,58 +33,72 @@
     </nav>
   </header>
 
-  <!-- Intro video: full screen, NO text -->
+  <!-- Intro video: full screen, no text -->
   <section class="intro-video" aria-label="Intro video">
-    <video class="intro-video__media" autoplay muted loop playsinline preload="metadata" poster="images/hero-poster.jpg">
+    <video class="intro-video__media"
+           autoplay
+           muted
+           loop
+           playsinline
+           preload="metadata"
+           poster="images/hero-poster.jpg"
+           aria-hidden="true">
       <source src="videos/intro.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </section>
 
-    <!-- AQUI ESTOY PONIENDO LA APP -->
-<section id="app" style="padding:96px 0;">
-  <div style="max-width:1080px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:center;">
-    <div>
-      <h2 style="font-size:36px;line-height:1.2;margin:0 0 12px;">Self care for your brain, in your pocket</h2>
-      <p style="font-size:18px;color:#444;margin:0 0 20px;">
-              An app that turns your complex biology into a simple, personalized action plan.      </p>
-      <ul style="list-style:none;padding:0;margin:0 0 16px;color:#222;">
-        <li>• Cycle and life stage aware plans</li>
-        <li>• Learn and apply science that enhences your life</li>
-        <li>• Science-based recommendations</li>
-      </ul>
+  <!-- App section (below video) -->
+  <section id="app" style="padding:96px 0;">
+    <div style="max-width:1080px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:center;">
+      <div>
+        <h2 style="font-size:36px;line-height:1.2;margin:0 0 12px;">Self care for your brain, in your pocket</h2>
+        <p style="font-size:18px;color:#444;margin:0 0 20px;">
+          An app that turns your complex biology into a simple, personalized action plan.
+        </p>
+        <ul style="list-style:none;padding:0;margin:0 0 16px;color:#222;">
+          <li>• Cycle and life stage aware plans</li>
+          <li>• Learn and apply science that enhances your life</li>
+          <li>• Science-based recommendations</li>
+        </ul>
 
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 8px;">
-        <a href="https://apps.apple.com/your-app" aria-label="Download on the App Store">
-          <img src="/assets/badges/appstore.svg" alt="App Store" height="48">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=your.app" aria-label="Get it on Google Play">
-          <img src="/assets/badges/googleplay.svg" alt="Google Play" height="48">
-        </a>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 8px;">
+          <a href="https://apps.apple.com/your-app" aria-label="Download on the App Store">
+            <img src="/assets/badges/appstore.svg" alt="App Store" height="48" loading="lazy" decoding="async">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=your.app" aria-label="Get it on Google Play">
+            <img src="/assets/badges/googleplay.svg" alt="Google Play" height="48" loading="lazy" decoding="async">
+          </a>
+        </div>
+
+        <ol style="display:flex;gap:16px;flex-wrap:wrap;padding:0;margin:24px 0 16px;list-style:none;color:#333;">
+          <li style="background:#f5f5f7;border-radius:10px;padding:12px 14px;">1. Register</li>
+          <li style="background:#f5f5f7;border-radius:10px;padding:12px 14px;">2. Tell us about you</li>
+          <li style="background:#f5f5f7;border-radius:10px;padding:12px 14px;">3. Get your instant personalized plan</li>
+        </ol>
+
+        <p style="font-size:14px;color:#666;">
+          Tus datos son tuyos. Ciframos tu información y no la vendemos.
+          <a href="/privacidad">Ver política</a>
+        </p>
       </div>
 
-      <ol style="display:flex;gap:16px;flex-wrap:wrap;padding:0;margin:24px 0 16px;list-style:none;color:#333;">
-        <li style="background:#f5f5f7;border-radius:10px;padding:12px 14px;">1. Register</li>
-        <li style="background:#f5f5f7;border-radius:10px;padding:12px 14px;">2. Tell us about you</li>
-        <li style="background:#f5f5f7;border-radius:10px;padding:12px 14px;">3. Get your instant personalized plan</li>
-      </ol>
-
-      <p style="font-size:14px;color:#666;">
-        Tus datos son tuyos. Ciframos tu información y no la vendemos.
-        <a href="/privacidad">Ver política</a>
-      </p>
+      <div style="display:flex;justify-content:center;">
+        <figure style="margin:0;">
+          <img src="/assets/mockups/app-screens.png"
+               alt="App screens preview"
+               style="width:100%;max-width:420px;border-radius:20px;box-shadow:0 12px 40px rgba(0,0,0,0.12);"
+               loading="lazy"
+               decoding="async">
+          <figcaption style="font-size:12px;color:#777;text-align:center;margin-top:8px;">
+            Vista previa de seguimiento y recomendaciones
+          </figcaption>
+        </figure>
+      </div>
     </div>
+  </section>
 
-    <div style="display:flex;justify-content:center;">
-      <figure style="margin:0;">
-        <img src="/assets/mockups/app-screens.png" alt="Pantallas de la app" style="width:100%;max-width:420px;border-radius:20px;box-shadow:0 12px 40px rgba(0,0,0,0.12);">
-        <figcaption style="font-size:12px;color:#777;text-align:center;margin-top:8px;">Vista previa de seguimiento y recomendaciones</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-  
-  <!-- Hero with text + form (image background from your CSS .hero) -->
+  <!-- Hero with text + form (image background via .hero in CSS) -->
   <main id="start" class="hero">
     <h1>Daily Wins for your Brain</h1>
     <p>When you care for your brain, you lift everything else. Sleep, mood, focus, energy, hormones.</p>
@@ -143,9 +163,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
