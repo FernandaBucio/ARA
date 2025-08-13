@@ -46,7 +46,6 @@ img{ max-width:100%; height:auto; display:block; }
   background: transparent;
   border-bottom:none;
   transition: background .25s ease, border-color .25s ease, box-shadow .25s ease;
-  padding-top: env(safe-area-inset-top);
 }
 .site-header.is-solid{
   background: rgba(255,255,255,.95);
@@ -57,7 +56,6 @@ img{ max-width:100%; height:auto; display:block; }
 .nav{
   max-width:1100px; margin:0 auto; padding:.75rem 1rem;
   display:flex; justify-content:space-between; align-items:center;
-  position: relative; /* ancla el dropdown al nav */
 }
 .logo{
   font-family: Poppins, sans-serif;
@@ -70,7 +68,6 @@ img{ max-width:100%; height:auto; display:block; }
 .nav-toggle{
   display:none; background:none; border:0; font-size:1.25rem; cursor:pointer;
   color:#fff; text-shadow:0 1px 3px rgba(0,0,0,.5);
-  min-width:44px; min-height:44px; border-radius:8px;
 }
 .site-header.is-solid .nav-toggle{ color: var(--ink); text-shadow:none; }
 .menu{ display:flex; list-style:none; gap:1rem; margin:0; padding:0; }
@@ -88,14 +85,13 @@ img{ max-width:100%; height:auto; display:block; }
   position: relative;
   width: 100%;
   height: 100vh;
-  height: 100svh;    /* modern móviles */
-  height: 100dvh;    /* fallback dinámico moderno */
+  height: 100svh;   /* mejor en móviles modernos */
+  height: 100dvh;   /* NUEVO: viewport dinámico moderno */
   overflow: hidden;
   margin-top: 0;
 }
 .intro-video__media{
   position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
-  object-position:center;
 }
 
 /* ===== HERO ===== */
@@ -104,7 +100,7 @@ img{ max-width:100%; height:auto; display:block; }
   width:100%;
   min-height:100vh;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  text-align:center; padding:0 1rem 24px;
+  text-align:center; padding:0 1rem 24px; /* breathing room */
   color:#fff;
   background:
     linear-gradient(rgba(0,0,0,.38), rgba(0,0,0,.38)),
@@ -179,50 +175,11 @@ img{ max-width:100%; height:auto; display:block; }
 ul.list{ margin:.5rem 0 0 1.25rem; }
 ul.list li{ margin:.25rem 0; }
 
-/* App section */
-#app{
+/* App section spacing (place this on your app section container) */
+#app, .section.app{
   position: relative;
   z-index: 1;
-  padding:96px 0;
-}
-.app-grid{
-  max-width:1080px;
-  margin:0 auto;
-  padding:0 20px;
-  display:grid;
-  grid-template-columns:1.1fr 0.9fr;
-  gap:32px;
-  align-items:center;
-}
-.app-title{
-  font-size:clamp(24px, 5.2vw, 36px);
-  line-height:1.2;
-  margin:0 0 12px;
-}
-.app-subtitle{
-  font-size:clamp(16px, 3.8vw, 18px);
-  color:#444;
-  margin:0 0 20px;
-}
-.app-list{
-  list-style:none; padding:0; margin:0 0 16px; color:#222;
-}
-.store-badges{
-  display:flex; gap:12px; flex-wrap:wrap; margin:16px 0 8px;
-}
-.steps{
-  display:flex; gap:16px; flex-wrap:wrap; padding:0; margin:24px 0 16px; list-style:none; color:#333;
-}
-.steps li{ background:#f5f5f7; border-radius:10px; padding:12px 14px; }
-.privacy-note{ font-size:14px; color:#666; }
-
-.mockup-figure{ margin:0; }
-.mockup-figure img{
-  width:100%; max-width:420px; border-radius:20px; box-shadow:0 12px 40px rgba(0,0,0,0.12);
-  margin-inline:auto;
-}
-.mockup-figure figcaption{
-  font-size:12px; color:#777; text-align:center; margin-top:8px;
+  margin-top: 40px;
 }
 
 /* Anchors: avoid fixed header overlap */
@@ -233,41 +190,20 @@ ul.list li{ margin:.25rem 0; }
 
 /* ===== Responsive ===== */
 @media (max-width:720px){
-  /* Video ligeramente más corto para evitar doble scroll con header fijo */
-  .intro-video{ height:90svh; height:90dvh; }
-
-  /* Hero más compacto en móvil */
-  .hero{ min-height:78svh; padding-top: env(safe-area-inset-top); }
-
-  /* Logo y toggler */
+  #app > div { grid-template-columns: 1fr; }
+  
   .logo{ font-size:2.2rem; }
-
-  .nav-toggle{ display:inline-flex; align-items:center; justify-content:center; }
-
-  /* Menú móvil desplegable anclado al nav */
+  .nav-toggle{ display:inline-block; }
   .menu{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    right:1rem; top:calc(100% + 8px);
-    background: rgba(255,255,255,.95);
-    border:1px solid var(--border); border-radius:12px; padding:.5rem; min-width:200px;
+    display:none; flex-direction:column; position:absolute; right:1rem; top:3.25rem;
+    background: rgba(255,255,255,.95); border:1px solid var(--border); border-radius:12px; padding:.5rem; min-width:180px;
     box-shadow:0 12px 28px rgba(0,0,0,.08);
-    z-index: 1001;
   }
   .menu.open{ display:flex; }
-  .menu a{ color: var(--ink); text-shadow:none; padding:.5rem .75rem; }
-
-  /* Si el header está transparente sobre el video, usa dropdown oscuro */
+  /* If header is still transparent over video, use darker dropdown */
   .site-header:not(.is-solid) .menu{
-    background: rgba(0,0,0,.7); border-color:transparent; box-shadow:none;
+    background: rgba(0,0,0,.6); border-color:transparent; box-shadow:none;
   }
-  .site-header:not(.is-solid) .menu a{ color:#fff; }
-
-  /* App grid a una columna y espacios más contenidos */
-  .app-grid{ grid-template-columns: 1fr; gap:20px; }
-  #app{ padding:56px 0; }
-
-  /* Inputs full-width en móvil */
-  .newsletter input{ min-width:unset; width: min(100%, 420px); }
+  .site-header:not(.is-solid) .menu a{ color:#fff; text-shadow:none; }
+  .intro-video{ height:90vh; height:90svh; }
 }
