@@ -44,54 +44,57 @@
            preload="metadata"
            poster="images/hero-poster.jpg"
            aria-hidden="true">
+      <!-- NUEVO: fuente vertical para pantallas pequeñas -->
+      <source src="videos/phone.intro.mp4" type="video/mp4" media="(max-width: 720px)" />
+      <!-- Escritorio / pantallas grandes -->
       <source src="videos/intro.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </section>
 
   <!-- App section (below video) -->
-  <section id="app">
-    <div class="app-grid">
-      <div class="app-col">
-        <h2 class="app-title">Self care for your brain, in your pocket</h2>
-        <p class="app-subtitle">
+  <section id="app" style="padding:96px 0;">
+    <div style="max-width:1080px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:center;">
+      <div>
+        <h2 style="font-size:36px;line-height:1.2;margin:0 0 12px;">Self care for your brain, in your pocket</h2>
+        <p style="font-size:18px;color:#444;margin:0 0 20px;">
           An app that turns your complex biology into a simple, personalized action plan.
         </p>
-        <ul class="app-list">
+        <ul style="list-style:none;padding:0;margin:0 0 16px;color:#222;">
           <li>• Cycle and life stage aware plans</li>
           <li>• Learn and apply science that enhances your life</li>
           <li>• Science-based recommendations</li>
         </ul>
 
-        <div class="store-badges">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 8px;">
           <a href="https://apps.apple.com/your-app" aria-label="Download on the App Store">
-            <img src="assets/badges/appstore.svg" alt="App Store" height="48" loading="lazy" decoding="async">
+            <img src="/assets/badges/appstore.svg" alt="App Store" height="48" loading="lazy" decoding="async">
           </a>
           <a href="https://play.google.com/store/apps/details?id=your.app" aria-label="Get it on Google Play">
-            <img src="assets/badges/googleplay.svg" alt="Google Play" height="48" loading="lazy" decoding="async">
+            <img src="/assets/badges/googleplay.svg" alt="Google Play" height="48" loading="lazy" decoding="async">
           </a>
         </div>
 
-        <ol class="steps">
-          <li>1. Register</li>
-          <li>2. Tell us about you</li>
-          <li>3. Get your instant personalized plan</li>
+        <ol style="display:flex;gap:16px;flex-wrap:wrap;padding:0;margin:24px 0 16px;list-style:none;color:#333;">
+          <li style="background:#f5f5f7;border-radius:10px;padding:12px 14px;">1. Register</li>
+          <li style="background:#f5f5f7;border-radius:10px;padding:12px 14px;">2. Tell us about you</li>
+          <li style="background:#f5f5f7;border-radius:10px;padding:12px 14px;">3. Get your instant personalized plan</li>
         </ol>
 
-        <p class="privacy-note">
+        <p style="font-size:14px;color:#666;">
           Tus datos son tuyos. Ciframos tu información y no la vendemos.
           <a href="/privacidad">Ver política</a>
         </p>
       </div>
 
-      <div class="app-visual">
-        <figure class="mockup-figure">
-          <img
-            src="assets/mockups/app-screens.png"
-            alt="App screens preview"
-            loading="lazy"
-            decoding="async">
-          <figcaption>
+      <div style="display:flex;justify-content:center;">
+        <figure style="margin:0;">
+          <img src="/assets/mockups/app-screens.png"
+               alt="App screens preview"
+               style="width:100%;max-width:420px;border-radius:20px;box-shadow:0 12px 40px rgba(0,0,0,0.12);"
+               loading="lazy"
+               decoding="async">
+          <figcaption style="font-size:12px;color:#777;text-align:center;margin-top:8px;">
             Vista previa de seguimiento y recomendaciones
           </figcaption>
         </figure>
@@ -161,6 +164,6 @@
     <p>© <span id="year"></span> ARA • <a href="#" aria-disabled="true">Privacy</a></p>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
