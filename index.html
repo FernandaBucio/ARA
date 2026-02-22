@@ -1,110 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ARA | Upgrade your brain. Elevate your life.</title>
-  <meta name="description" content="ARA is a fun, science-based community for women. Care for your brain and you care for your whole health." />
-  <meta property="og:title" content="ARA | Upgrade your brain. Elevate your life." />
-  <meta property="og:description" content="Care for your brain. Elevate your sleep, mood, focus, and energy." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#7C4DFF" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARA - Women's Data for Good</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <nav class="nav" aria-label="Main">
-      <a class="logo" href="index.html" aria-label="ARA home">ARA</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu">☰</button>
-      <ul id="menu" class="menu">
-        <li><a href="#what-we-do">What we do</a></li>
-        <li><a href="#who-we-help">Who we help</a></li>
-        <li><a href="#join">Join</a></li>
-        <li><a href="team.html">Team</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="mobile-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">ARA</h1>
+            <p class="tagline">Women's Data for Good</p>
+        </header>
 
-  <!-- Intro video -->
-  <section class="intro-video" aria-label="Intro video">
-    <video class="intro-video__media"
-           autoplay muted loop playsinline preload="metadata"
-           poster="images/hero-poster.jpg" aria-hidden="true">
-      <source src="videos/phone.intro.mp4" type="video/mp4" media="(max-width: 720px)" />
-      <source src="videos/new.web.intro.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </section>
+        <!-- Navigation -->
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-item active">Home</a>
+            <a href="discover.html" class="nav-item">Discover</a>
+            <a href="who.html" class="nav-item">Who We Are</a>
+            <a href="team.html" class="nav-item">Team</a>
+        </nav>
 
-  <!-- App section -->
-  <section id="what-we-do" class="section app">
-    <div class="app-container">
-      <div>
-        <h2>What we do</h2>
-        <p>ARA transforms women’s brain health science into a minimal daily system you can actually follow.</p>
-        <ul>
-          <li>Personalized plans adapted to cycle and life stage</li>
-          <li>Simple, science-backed actions for sleep, focus, energy, and mood</li>
-          <li>Community support that helps you stay consistent</li>
-        </ul>
-        <ol>
-          <li>Create your profile</li>
-          <li>Share your goals and lifestyle</li>
-          <li>Start your custom brain-first plan instantly</li>
-        </ol>
-      </div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Own Your Data.</h2>
+                <h2>Change the Future.</h2>
+                <p>A secure, ethical platform where women control their data and create positive impact.</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </section>
 
-      <div class="app-image">
-        <figure>
-          <img src="images/phone.png" alt="App screens preview" loading="lazy" decoding="async">
-        </figure>
-      </div>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Privacy First</h3>
+                <p>Your data is yours. Complete control over what you share.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Insights</h3>
+                <p>Understand patterns and trends that affect your life.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Impact</h3>
+                <p>Your data powers research for women's health and wellbeing.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💪</div>
+                <h3>Empowerment</h3>
+                <p>Join a community creating real change.</p>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2>Ready to Make a Difference?</h2>
+            <p>Be part of a movement where women's data becomes women's power.</p>
+            <button class="cta-button secondary">Learn More</button>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 ARA. Empowering women through data.</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+        </footer>
     </div>
-  </section>
 
-  <!-- Community -->
-  <section id="who-we-help" class="section">
-    <h2>Who we work for</h2>
-    <p>We work with women who want better performance and wellbeing through evidence-based, practical health guidance.</p>
-    <ul class="list">
-      <li>Students and professionals balancing performance, stress, and hormones.</li>
-      <li>Mothers and caregivers with limited time who need high-impact routines.</li>
-      <li>Teams, organizations, and communities investing in women’s health and productivity.</li>
-    </ul>
-  </section>
-
-  <!-- Community -->
-  <section id="community" class="section alt">
-    <h2>Community</h2>
-    <p>A judgment-free place to ask questions, share wins, and build brain-first habits with other women.</p>
-    <a class="cta" href="https://discord.com" target="_blank" rel="noopener">Enter Discord</a>
-  </section>
-
-  <!-- Join -->
-  <section id="join" class="section">
-    <h2>How to join + benefits</h2>
-    <ul class="list">
-      <li><strong>Join in minutes:</strong> Sign up, complete your profile, and get your first plan instantly.</li>
-      <li><strong>Clear weekly direction:</strong> Know exactly what to do next without overwhelm.</li>
-      <li><strong>Better daily outcomes:</strong> Improve focus, mood, sleep quality, and sustainable energy.</li>
-      <li><strong>Belong to a mission-driven network:</strong> Grow with women committed to better brain health.</li>
-    </ul>
-    <p><a class="cta" href="#" aria-disabled="true">Join ARA (coming soon)</a></p>
-  </section>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> ARA • <a href="#" aria-disabled="true">Privacy</a></p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
