@@ -1,86 +1,79 @@
-// script.js
-// Set dynamic year
-const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+// Mobile Navigation
+document.addEventListener('DOMContentLoaded', () => {
+    const navItems = document.querySelectorAll('.nav-item');
+    
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            // Remove active class from all items
+            navItems.forEach(nav => nav.classList.remove('active'));
+            // Add active class to clicked item
+            item.classList.add('active');
+        });
+    });
 
-// Accessible mobile menu
-const toggle = document.querySelector('.nav-toggle');
-const menu = document.getElementById('menu');
-if (toggle && menu) {
-  // Toggle open/close
-  toggle.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-  // Cierra al hacer click en un enlace
-  menu.addEventListener('click', (e) => {
-    if (e.target.closest('a')) {
-      menu.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+    // CTA Button functionality
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Smooth scroll to discover section or navigate
+            window.location.href = 'discover.html';
+        });
+    });
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Apply observer to feature cards
+    document.querySelectorAll('.feature-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+    });
+
+    // Set active nav based on current page
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    navItems.forEach(item => {
+        if (item.getAttribute('href') === currentPage) {
+            item.classList.add('active');
+        }
+    });
+});
+
+// Haptic feedback for iOS (if available)
+function triggerHaptic() {
+    if (navigator.vibrate) {
+        navigator.vibrate(10);
     }
-  });
-  // Cierra al clicar fuera
-  document.addEventListener('click', (e) => {
-    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
-      menu.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
 }
 
-// Simple mock subscribe (replace with real Substack or Mailchimp later)
-const form = document.getElementById('newsletter');
-const status = document.getElementById('status');
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const emailInput = document.getElementById('email');
-    const email = emailInput ? emailInput.value.trim() : '';
-    if (!email || !email.includes('@')) {
-      if (status) status.textContent = 'Please enter a valid email.';
-      return;
-    }
-    if (status) status.textContent = 'Thanks for joining ARA. Check your inbox soon.';
-    form.reset();
-  });
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', triggerHaptic);
+});
+
+// Performance optimization
+if ('loading' in HTMLImageElement.prototype) {
+    // Browser supports lazy loading
+    document.querySelectorAll('img').forEach(img => {
+        img.loading = 'lazy';
+    });
 }
 
-// Solid header after the intro video
-(function(){
-  const header = document.querySelector('.site-header');
-  const intro = document.querySelector('.intro-video');
-  if (!header || !intro) return;
-
-  // Usa IntersectionObserver para evitar jitter en móvil
-  if ('IntersectionObserver' in window) {
-    const sentinel = document.createElement('div');
-    sentinel.style.position = 'absolute';
-    sentinel.style.inset = 'auto 0 0 0';
-    sentinel.style.height = '1px';
-    intro.appendChild(sentinel);
-
-    const io = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting) {
-        header.classList.remove('is-solid');
-      } else {
-        header.classList.add('is-solid');
-      }
-    }, { root: null, threshold: 0, rootMargin: '-10px 0px 0px 0px' });
-
-    io.observe(sentinel);
-  } else {
-    // Fallback a scroll
-    function onScroll(){
-      const threshold = intro.offsetHeight - 10;
-      if (window.scrollY > threshold){
-        header.classList.add('is-solid');
-      } else {
-        header.classList.remove('is-solid');
-      }
-    }
-    onScroll();
-    window.addEventListener('scroll', onScroll);
-    window.addEventListener('resize', onScroll);
-  }
-})();
+// Service Worker registration for offline support
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(() => {
+        // Service worker registration failed, app still works
+    });
+}
